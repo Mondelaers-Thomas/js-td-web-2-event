@@ -9,7 +9,25 @@ EXERCICE 5 : Change couleur (2) - Colorie la page en fonction des touches press�
     et affiche le message 'Touche … non gérée' s'il presse une autre touche.
 - Méthode : utilise un switch pour gérer les différents cas de touches
 */
-
+document.addEventListener('keypress',  (event) => {
+    let touche = event.key.toUpperCase();
+    switch(touche){
+        case 'R':
+            document.body.style.backgroundColor = 'red';
+            break
+        case 'B':
+            document.body.style.backgroundColor = 'blue';
+            break
+        case 'J':
+            document.body.style.backgroundColor = 'yellow';
+            break
+        case 'V':
+            document.body.style.backgroundColor = 'green';
+            break
+        default:
+            console.log(`Touche ${touche} non gérée`);
+    }
+})
 
 
 /* 

@@ -13,4 +13,15 @@ AIDE : voici les étapes :
 4. On incrémente l'index de 1 pour faire défiler les images
 5. En fin de longueur du tableau, on redémarre au début de l'index
 */
-
+const gallery = ['img/becode-seal.png', 'img/bell.svg', 'img/clock.svg', 'img/compass.svg',
+                        'img/kiss.svg', 'img/kiss-wink-heart.svg', 'img/lemon.svg', 'img/mpa.svg'];
+let compteur = 1;
+imgLoop = document.querySelector('.material').firstElementChild.firstElementChild;
+document.getElementById('next').addEventListener('click', e => {
+    if(compteur >= gallery.length-2){
+        compteur = 0
+    } else {
+        compteur++;
+    }
+    imgLoop.setAttribute('src', gallery[compteur]);
+});

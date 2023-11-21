@@ -6,3 +6,20 @@ Version 1  : une fonction par bouton radio
 		(1) un alert dans une fonction pour voir à quoi correspond e.target
 		(2) un alert dans chaque fonction pour voir à quoi correspond e.target.value
 */
+document.getElementById('rouge').addEventListener("click", (event) => {
+    document.body.style.backgroundColor = document.getElementById('rouge').getAttribute('value');
+    alert(event.target);
+    alert(event.target.value);
+})
+document.getElementById('vert').addEventListener("click", (event) => {
+    document.body.style.backgroundColor = document.getElementById('vert').getAttribute('value');
+    alert(event.target.value);
+})
+document.getElementById('bleu').addEventListener("click", (event) => {
+    document.body.style.backgroundColor = document.getElementById('bleu').getAttribute('value');
+    alert(event.target.value);
+})
+document.getElementById('jaune').addEventListener("click", (event) => {
+    document.body.style.backgroundColor = document.getElementById('jaune').getAttribute('value');
+    alert(event.target.value);
+})

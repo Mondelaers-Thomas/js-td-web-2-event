@@ -42,10 +42,11 @@ MÉTHODE :
 3. ajouter à ce bouton un gestionnaire d'événement avec la méthode  addEventListener() qui va écouter le clic (événement click) et qui, au clic sur le bouton,  déclenchera l'appel de la fonction direbonjour.
 */
 
-
-
-
 // Autre écriture : avec une fonction anonyme
-
+const direBonjour = () => {
+  alert('Bonjour, toi !');
+}
 
 // Écriture ES6
+const monBouton = document.getElementById('hello');
+monBouton.addEventListener('click', direBonjour);

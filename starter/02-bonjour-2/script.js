@@ -13,9 +13,20 @@
 
 
 // Autre écriture
+const monBouton = document.getElementById('hello');
+const prenom = document.getElementById('prenom').value;
 
+function direBonjour() {
+    !prenom ? alert("Bonjour, toi ! Tu ne veux pas me dire comment tu t'appelles ?") : alert(`Bonjour, ${prenom}`);
+}
+const anonymeBonjour = function() {
+    !prenom ? alert("Bonjour, toi ! Tu ne veux pas me dire comment tu t'appelles ?") : alert(`Bonjour, ${prenom}`);
+}
+const arrowBonjour = () => {
+    !prenom ? alert("Bonjour, toi ! Tu ne veux pas me dire comment tu t'appelles ?") : alert(`Bonjour, ${prenom}`);
+}
 
-
+monBouton.addEventListener('click', anonymeBonjour);
 
 // Plus court : écriture ES6 avec expression conditionnelle
 

@@ -1,4 +1,4 @@
-/* 
+/*
 SOURCE : https://github.com/leny/becode-js-corrections
 */
 /*
@@ -6,7 +6,7 @@ EXERCICE 8 :
 Au clic sur l'image, change sa source par celle qui se trouve dans son attribut "data-hover".
 BONUS : switche entre les deux images : quand on re-clique, tu reviens à l'image originale et ainsi de suite
 */
-/* 
+/*
 AIDE POUR LE BONUS :
 Pour réaliser cet effet, il suffit d'échanger le contenu des deux propriétés src et dataset.hover :
 	* au clic 1, on met l'image de data.hover dans src et celle de src dans data.hover => dans src, il y a à présent la nouvelle (on affiche donc bien la nouvelle) et maintenant, dans data.hover, il a l'ancienne
@@ -15,7 +15,7 @@ Pour réaliser cet effet, il suffit d'échanger le contenu des deux propriétés
 */
 /*
 Parenthèse : comment échanger le contenu de 2 variables ?
-La méthode classique est de créer une variable temporaire, comme ceci : 
+La méthode classique est de créer une variable temporaire, comme ceci :
 	var a, b, t;
 	a = 2;
 	b = 3;
@@ -28,6 +28,11 @@ La méthode classique est de créer une variable temporaire, comme ceci :
 
 
 // version de base
-
+let img = document.querySelector('.material').firstElementChild.firstElementChild;
+img.addEventListener('click', e => {
+    let tempSrc = img.dataset.hover;
+    img.dataset.hover = img.getAttribute('src');
+    img.setAttribute('src', tempSrc);
+});
 
 // BONUS : switch entre les deux images

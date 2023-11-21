@@ -14,6 +14,18 @@ Quand l'événement se déclenche, JavaScript crée un objet Event qui peut êtr
 	- a notamment la propriété currentTarget, qui renseigne la cible de l'événement (c.-à-d. l'élément qui a déclenché la fonction) ;
 	- est fourni à la fonction sous la forme d'un paramètre (qu'on appelle souvent e, ou event).
 */
+/*
+const boutonBonjour = document.getElementById('hello');
+
+boutonBonjour.addEventListener('click', event = () =>{
+    const imageBonjour = document.createElement('img');
+    imageBonjour.src = ('bonjour.jpg');
+    imageBonjour.alt = ('Bonjour toi !');
+    document.querySelector('.display').appendChild(imageBonjour);
+    document.querySelector('.actions').removeChild(event.currentTarget);
+})
+ */
+
 
 /* EXERCICE 3bis :
 - recopie le code de l'exercice 3 et ajoute une ligne dans la fonction direBonjour qui affiche dans la console la valeur de currentTarget ;
@@ -27,7 +39,16 @@ C'est une notion IMPORTANTE, essentielle, très très souvent utilisée dans la 
 */
 
 // autre écriture
+const boutonBonjour = document.getElementById('hello');
 
+boutonBonjour.addEventListener('click', event = () =>{
+    const imageBonjour = document.createElement('img');
+    imageBonjour.src = ('bonjour.jpg');
+    imageBonjour.alt = ('Bonjour toi !');
+    console.log(event.currentTarget);
+    document.querySelector('.display').appendChild(imageBonjour);
+    document.querySelector('.actions').removeChild(event.currentTarget);
+})
 
 
 // Écriture ES6
